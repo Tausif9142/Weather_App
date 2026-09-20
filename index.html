@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Weather App</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>🌤️ Weather App</h1>
+        <p class="subtitle">Check the current weather of any location</p>
+
+        <!-- Search -->
+        <div class="search-box">
+            <input
+                type="text"
+                id="locationInput"
+                placeholder="Enter city name..."
+            >
+
+            <button onclick="getWeather()">
+                Search
+            </button>
+        </div>
+
+        <!-- Loading -->
+        <p id="loading" class="loading">Loading...</p>
+
+        <!-- Error -->
+        <p id="error" class="error"></p>
+
+        <!-- Weather Card -->
+        <div id="weatherCard" class="weather-card">
+
+            <div class="location">
+                <h2 id="city">London</h2>
+                <p id="country">United Kingdom</p>
+            </div>
+
+            <div class="main-weather">
+
+                <img id="weatherIcon" src="" alt="Weather">
+
+                <div>
+                    <h3 id="temperature">--°C</h3>
+                    <p id="condition">--</p>
+                </div>
+
+            </div>
+
+            <!-- Weather Details -->
+            <div class="details">
+
+                <div class="detail-box">
+                    <span>🌡️</span>
+                    <p>Feels Like</p>
+                    <strong id="feelsLike">--°C</strong>
+                </div>
+
+                <div class="detail-box">
+                    <span>💧</span>
+                    <p>Humidity</p>
+                    <strong id="humidity">--%</strong>
+                </div>
+
+                <div class="detail-box">
+                    <span>💨</span>
+                    <p>Wind</p>
+                    <strong id="wind">-- km/h</strong>
+                </div>
+
+                <div class="detail-box">
+                    <span>☁️</span>
+                    <p>Cloud</p>
+                    <strong id="cloud">--%</strong>
+                </div>
+
+                <div class="detail-box">
+                    <span>👁️</span>
+                    <p>Visibility</p>
+                    <strong id="visibility">-- km</strong>
+                </div>
+
+                <div class="detail-box">
+                    <span>☀️</span>
+                    <p>UV Index</p>
+                    <strong id="uv">--</strong>
+                </div>
+
+            </div>
+
+            <!-- Air Quality -->
+            <div class="air-quality">
+
+                <h3>🌍 Air Quality</h3>
+
+                <div class="aqi-container">
+
+                    <div>
+                        <p>US EPA Index</p>
+                        <strong id="aqi">--</strong>
+                    </div>
+
+                    <div>
+                        <p>PM2.5</p>
+                        <strong id="pm25">-- μg/m³</strong>
+                    </div>
+
+                    <div>
+                        <p>PM10</p>
+                        <strong id="pm10">-- μg/m³</strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <p class="updated">
+                Last Updated:
+                <span id="updated">--</span>
+            </p>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

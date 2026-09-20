@@ -1,0 +1,270 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+
+    background: linear-gradient(
+        135deg,
+        #4facfe,
+        #00f2fe
+    );
+}
+
+.container {
+    width: 100%;
+    max-width: 750px;
+
+    text-align: center;
+}
+
+h1 {
+    color: white;
+    font-size: 42px;
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    color: white;
+    margin-bottom: 25px;
+}
+
+/* Search */
+
+.search-box {
+    display: flex;
+
+    max-width: 600px;
+
+    margin: auto;
+    margin-bottom: 25px;
+}
+
+.search-box input {
+    flex: 1;
+
+    padding: 15px;
+
+    border: none;
+    outline: none;
+
+    border-radius: 10px 0 0 10px;
+
+    font-size: 16px;
+}
+
+.search-box button {
+    padding: 15px 25px;
+
+    border: none;
+
+    background: #222;
+    color: white;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    border-radius: 0 10px 10px 0;
+}
+
+.search-box button:hover {
+    background: #111;
+}
+
+/* Weather Card */
+
+.weather-card {
+    background: rgba(255, 255, 255, 0.95);
+
+    border-radius: 20px;
+
+    padding: 30px;
+
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+.location h2 {
+    font-size: 30px;
+    color: #222;
+}
+
+.location p {
+    color: #666;
+    margin-top: 5px;
+}
+
+/* Main Weather */
+
+.main-weather {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 20px;
+
+    margin: 25px 0;
+}
+
+.main-weather img {
+    width: 100px;
+    height: 100px;
+}
+
+#temperature {
+    font-size: 50px;
+    color: #222;
+}
+
+#condition {
+    font-size: 18px;
+    color: #555;
+}
+
+/* Details */
+
+.details {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 15px;
+
+    margin-top: 20px;
+}
+
+.detail-box {
+    background: #f5f7fa;
+
+    padding: 18px;
+
+    border-radius: 12px;
+}
+
+.detail-box span {
+    font-size: 25px;
+}
+
+.detail-box p {
+    color: #777;
+
+    margin: 7px 0;
+}
+
+.detail-box strong {
+    color: #222;
+}
+
+/* Air Quality */
+
+.air-quality {
+    margin-top: 25px;
+
+    padding: 20px;
+
+    background: #f5f7fa;
+
+    border-radius: 15px;
+}
+
+.air-quality h3 {
+    margin-bottom: 15px;
+}
+
+.aqi-container {
+    display: flex;
+
+    justify-content: space-around;
+
+    gap: 15px;
+}
+
+.aqi-container p {
+    color: #777;
+
+    margin-bottom: 5px;
+}
+
+/* Updated */
+
+.updated {
+    margin-top: 20px;
+
+    color: #777;
+
+    font-size: 14px;
+}
+
+/* Loading */
+
+.loading {
+    display: none;
+
+    color: white;
+
+    margin-bottom: 20px;
+}
+
+/* Error */
+
+.error {
+    color: white;
+
+    background: #e74c3c;
+
+    padding: 12px;
+
+    border-radius: 8px;
+
+    display: none;
+
+    margin-bottom: 20px;
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    h1 {
+        font-size: 32px;
+    }
+
+    .search-box {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .search-box input {
+        border-radius: 10px;
+    }
+
+    .search-box button {
+        border-radius: 10px;
+    }
+
+    .details {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .aqi-container {
+        flex-direction: column;
+    }
+
+    #temperature {
+        font-size: 40px;
+    }
+
+}
